@@ -1,0 +1,195 @@
+{
+  "student": [
+    {
+      "name": "Shubham Kumar",
+      "height": "6",
+      "weight": "60 kg",
+      "fee": "11111",
+      "address": "ranchi",
+      "cont": "555555",
+      "id": 3
+    },
+    {
+      "name": "Ankit",
+      "height": "4",
+      "weight": "44kg",
+      "fee": "500",
+      "address": "ranchi",
+      "cont": "8235663566",
+      "id": 4
+    },
+    {
+      "name": "Mohit",
+      "height": "4",
+      "weight": "44",
+      "fee": "500",
+      "address": "tatisilwai",
+      "cont": "8235663590",
+      "id": 5
+    },
+    {
+      "name": "Ankit",
+      "height": "4",
+      "weight": "44",
+      "fee": "500",
+      "address": "aragate",
+      "cont": "8235663595",
+      "id": 6
+    }
+  ],
+  "money": [
+    {
+      "mr": "2",
+      "date": "2023-05-26",
+      "Sel": "Ankit",
+      "address": "kolkata",
+      "contact": "555555",
+      "amount": "5000",
+      "month": "october",
+      "id": 2
+    },
+    {
+      "mrno": "23",
+      "date": "2023-05-10",
+      "Sel": "Ankit",
+      "add": "aragate",
+      "cont1": "8235663595",
+      "amount": "30000",
+      "month": "january",
+      "id": 3
+    },
+    {
+      "mrno": "4",
+      "date": "2023-05-02",
+      "Sel": "Shubham Kumar",
+      "add": "aaa",
+      "cont1": "cccccc",
+      "amount": "300000",
+      "month": "october",
+      "id": 4
+    }
+  ],
+  "fee": [
+    {
+      "date1": "18/05/23",
+      "date2": "22/05/23",
+      "Sel1": "Mohit",
+      "amounts": "500",
+      "id": 1
+    },
+    {
+      "date1": "20/05/23",
+      "date2": "21/05/23",
+      "Sel1": "Mohit",
+      "amounts": "600",
+      "id": 2
+    },
+    {
+      "date1": "21/05/23",
+      "date2": "2023-05-20",
+      "Sel1": "Ankit",
+      "amounts": "700",
+      "id": 3
+    },
+    {
+      "date1": "2023-05-04",
+      "date2": "2023-05-11",
+      "Sel1": "Mohit",
+      "amounts": "800",
+      "id": 4
+    },
+    {
+      "date1": "2023-05-04",
+      "date2": "2023-05-16",
+      "Sel1": "Ankit",
+      "amounts": "900",
+      "id": 5
+    }
+  ],
+  "sdata": [
+    {
+      "name": "shubham",
+      "email": "mohitniranjan31@gmail.com",
+      "password": "1234",
+      "rpassword": "1234",
+      "id": 1
+    },
+    {
+      "name": "Ankit",
+      "email": "abc@gmail.com",
+      "password": "12345",
+      "rpassword": "12345",
+      "id": 2
+    },
+    {
+      "name": "",
+      "email": "",
+      "password": "",
+      "rpassword": "",
+      "id": 3
+    },
+    {
+      "name": "",
+      "email": "",
+      "password": "",
+      "rpassword": "",
+      "id": 4
+    },
+    {
+      "name": "",
+      "email": "",
+      "password": "",
+      "rpassword": "",
+      "id": 5
+    },
+    {
+      "name": "",
+      "email": "",
+      "password": "",
+      "rpassword": "",
+      "id": 6
+    },
+    {
+      "name": "",
+      "email": "",
+      "password": "",
+      "rpassword": "",
+      "id": 7
+    },
+    {
+      "name": "",
+      "email": "",
+      "password": "",
+      "rpassword": "",
+      "id": 8
+    },
+    {
+      "name": "",
+      "email": "mohitniranjan31@gmail.com",
+      "password": "",
+      "rpassword": "",
+      "id": 9
+    },
+    {
+      "name": "",
+      "email": "mohitniranjan31@gmail.com",
+      "password": "",
+      "rpassword": "",
+      "id": 10
+    },
+    {
+      "name": "",
+      "email": "",
+      "password": "",
+      "rpassword": "",
+      "id": 11
+    },
+    {
+      "name": "",
+      "email": "mohitniranjan31@gmail.com",
+      "password": "1234",
+      "rpassword": "1234",
+      "id": 12
+    }
+  ]
+}

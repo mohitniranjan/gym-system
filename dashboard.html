@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <!--<title> Responsive Sidebar Menu  | CodingLab </title>-->
+     
+     <!-- Boxicons CDN Link -->
+     <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="./style.css" type="text/css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* The Close Button */
+        .close {
+            color: red;
+            float: right;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: red;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+         /* The Close Button */
+         .close2 {
+            color: red;
+            float: right;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .close2:hover,
+        .close2:focus {
+            color: red;
+            text-decoration: none;
+            cursor: pointer;
+        }
+         /* The Close Button */
+         .close3 {
+            color: red;
+            float: right;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .close3:hover,
+        .close3:focus {
+            color: red;
+            text-decoration: none;
+            cursor: pointer;
+        }
+/* end of close 2 button */
+.close4 {
+            color: red;
+            float: right;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .close4:hover,
+        .close4:focus {
+            color: red;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        /* ///////// */
+        .editclose {
+            color: red;
+            float: right;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .editclose:hover,
+        .editclose:focus {
+            color: red;
+            text-decoration: none;
+            cursor: pointer;
+        }       
+        
+    </style>
+</head>
+<body onload="showData(); showData2(); showData3();ShowAmt();">
+  <div class="sidebar">
+    <div class="logo-details">
+      
+        <div class="logo_name">Gym Management System</div>
+        <i class="bx bx-menu" id="btn"></i>
+    </div>
+    <ul class="nav-list">
+
+        <li>
+            <a href="# " onclick="showStudent();">
+                <i class="bx bx-user"></i>
+                <span class="links_name">Student's Details</span>
+              </a>
+              <span class="tooltip">Student's Details</span>
+            </li>
+    
+      <li>
+        <a href="#" onclick="showmoney();">
+          <i class="bx bx-grid-alt"></i>
+          <span class="links_name">Money Receipt</span>
+        </a>
+         <span class="tooltip">Money Receipt</span>
+      </li>
+
+      <li>
+        <a href="#" onclick="showfee(); showtotal();">
+          <i class="bx bx-grid-alt"></i>
+          <span class="links_name">Fee Summary</span>
+        </a>
+         <span class="tooltip">Fee Summary</span>
+      </li>
+      
+     
+    
+     
+    
+     
+     <li class="profile">
+         <div class="profile-details">
+           <!--<img src="profile.jpg" alt="profileImg">-->
+           <div class="name_job">
+             <div class="name">Mohit Niranjan</div>
+             <div class="job">Web designer</div>
+           </div>
+         </div>
+         <i class="bx bx-log-out" id="log_out" ></i>
+     </li>
+    </ul>
+  </div>
+
+  <section class="home-section" id="s1" style="display: block;">
+    <div class="text">Student Details</div>
+    <br>
+    <button id="myBtn">Add New</button>
+    <!-- Table -->
+    <button id="b1" onclick="showData()">View List</button>
+    
+    <table class="table table-danger table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Student Name </th>
+                <th>Height</th>
+                <th>Weight</th>
+                <th>Fee</th>
+                <th>address</th>
+                <th>contact</th>
+                <th>action</th>
+            </tr>
+        </thead>
+        <tbody id="tblBody">
+
+        </tbody>
+    </table>
+<!-- Table -->
+
+
+<p id="target"></p>
+<div id="myModal" class="modal">
+<div class="modal-content">
+  <span class="close">&times;</span>
+  <div class="container">
+      <h4>Student Details</h4>
+
+      <form class="form-horizontal">
+          <!-- <div class="form-group">
+              <label class="control-label col-sm-2" for="id">Id:</label>
+              <div class="col-sm-10" style="width: 300px;">
+                  <input type="text" class="form-control" id="id" placeholder="Enter Id" name="id">
+              </div>
+          </div> -->
+          <div class="form-group">
+              <label class="control-label col-sm-2" for="student name">Student Name:</label>
+              <div class="col-sm-10" style="width: 300px;">
+                  <input type="text" class="form-control" id="name" placeholder="Enter Student Name"
+                      name="name">
+              </div>
+          </div>
+          <div class="form-group">
+              <label class="control-label col-sm-2" for="height">Height:</label>
+              <div class="col-sm-10" style="width: 300px;">
+                  <input type="text" class="form-control" id="height" placeholder="Enter Height" name="height">
+              </div>
+          </div>
+
+          <div class="form-group">
+              <label class="control-label col-sm-2" for="weight">Weight:</label>
+              <div class="col-sm-10" style="width: 300px;">
+                  <input type="text" class="form-control" id="weight" placeholder="Enter Weight"
+                      name="weight">
+              </div>
+          </div>
+
+          <div class="form-group">
+              <label class="control-label col-sm-2" for="fee">Fee:</label>
+              <div class="col-sm-10" style="width: 300px;">
+                  <input type="text" class="form-control" id="fee" placeholder="Enter Fee"
+                      name="fee">
+              </div>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="Address">Address:</label>
+            <div class="col-sm-10" style="width: 300px;">
+                <input type="text" class="form-control" id="address" placeholder="Enter address"
+                    name="address">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="fee">contact:</label>
+            <div class="col-sm-10" style="width: 300px;">
+                <input type="text" class="form-control" id="cont" placeholder="Enter contact"
+                    name="cont">
+            </div>
+        </div>
+
+          <div class="container">
+
+              <div class="form-group">
+                  <div class="col-sm-offset-2 col-sm-10">
+                      <button type="button" id="btnCourseAdd" onclick="addCourse()" class="btn btn-primary ">update</button>
+                  </div>
+              </div>
+          </div>
+         
+      </form>
+  </div>
+  </div>
+  </div>
+
+<!-- update modal box start -->
+
+    
+<div id="myModal4" class="modal">
+    <div class="modal-content">
+      <span class="close4" onclick="show5()">&times;</span>
+      <div class="container">
+          <h4>Student Details</h4>
+    
+          <form class="form-horizontal">
+              <!-- <div class="form-group">
+                  <label class="control-label col-sm-2" for="id">Id:</label>
+                  <div class="col-sm-10" style="width: 300px;">
+                      <input type="text" class="form-control" id="id" placeholder="Enter Id" name="id">
+                  </div>
+              </div> -->
+              <div class="form-group">
+                  <label class="control-label col-sm-2" for="student name">Student Name:</label>
+                  <div class="col-sm-10" style="width: 300px;">
+                      <input type="text" class="form-control" id="name4" placeholder="Enter Student Name"
+                          name="name4">
+                  </div>
+              </div>
+              <div class="form-group">
+                  <label class="control-label col-sm-2" for="height">Height:</label>
+                  <div class="col-sm-10" style="width: 300px;">
+                      <input type="text" class="form-control" id="height4" placeholder="Enter Height" name="height4">
+                  </div>
+              </div>
+    
+              <div class="form-group">
+                  <label class="control-label col-sm-2" for="weight">Weight:</label>
+                  <div class="col-sm-10" style="width: 300px;">
+                      <input type="text" class="form-control" id="weight4" placeholder="Enter Weight"
+                          name="weight4">
+                  </div>
+              </div>
+    
+              <div class="form-group">
+                  <label class="control-label col-sm-2" for="fee">Fee:</label>
+                  <div class="col-sm-10" style="width: 300px;">
+                      <input type="text" class="form-control" id="fee4" placeholder="Enter Fee"
+                          name="fee4">
+                  </div>
+              </div>
+    
+              <div class="form-group">
+                <label class="control-label col-sm-2" for="Address">Address:</label>
+                <div class="col-sm-10" style="width: 300px;">
+                    <input type="text" class="form-control" id="address4" placeholder="Enter address"
+                        name="address4">
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="fee">contact:</label>
+                <div class="col-sm-10" style="width: 300px;">
+                    <input type="text" class="form-control" id="cont4" placeholder="Enter contact"
+                        name="cont4">
+                </div>
+            </div>
+    
+              <div class="container">
+    
+                  <div class="form-group">
+                      <div class="col-sm-offset-2 col-sm-10">
+                          <button type="button" onclick="update()"  class="btn btn-primary ">update</button>
+                      </div>
+                  </div>
+              </div>
+             
+          </form>
+      </div>
+      </div>
+      </div>
+  </section>
+<!-- end of student form -->
+<section class="home-section" id="s2" style="display: none;">
+    <div class="text">Money Receipt</div>
+    <br>
+    <button id="myBtn2">Add New</button>
+     <!-- Table -->
+     <button id="b2" onclick="showData2()">View List</button>
+    
+     <table class="table table-danger table-striped">
+         <thead>
+             <tr>
+                <th>ID</th>
+                 <th>MR NO</th>
+                 <th>Date </th>
+                 <th>student Name</th>
+                 <th>Address</th>
+                 <th>contact</th>
+                 <th>Amount</th>
+                 <th>Month</th>
+                 <th>Action</th>
+             </tr>
+         </thead>
+         <tbody id="tblBody2">
+ 
+         </tbody>
+     </table>
+ <!-- Table -->
+ <p id="target2"></p>
+<div id="myModal2" class="modal2">
+<div class="modal-content">
+  <span class="close2">&times;</span>
+ <div class="container">
+<h4>Money Receipt</h4>
+<form class="row g-3 needs-validation" novalidate>
+    <div class="row">
+    <div class="col-md-4">
+        <label for="MR NO" class="form-label" >MR NO</label>
+        <input type="text" class="form-control"id="mrno" name="mrno"  required>
+    </div>
+   </div>
+   <br>
+   <div class="row">
+    <div class="col-md-4">
+        <label for="Date" class="form-label" >DATE</label>
+        <input type="date" class="form-control"id="date" name="date"  required>
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-md-4">
+        <label for="Sname" class="form-label" >Studentname</label>
+        <select class="form-select" name="Sel" id="Sel"  onchange="ShowAmt1()" >
+            <option selected>........choose</option>
+        </select>
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-md-4">
+        <label for="address" class="form-label" >Address</label>
+        <input type="text" class="form-control" id="add" name="add" required>
+    </div>
+</div>
+
+<br>
+<div class="row">
+    <div class="col-md-4">
+        <label for="address" class="form-label" >contact</label>
+        <input type="text" class="form-control" id="cont1" name="cont1" required>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <label for="amount" class="form-label" >Amount</label>
+        <input type="text" class="form-control" id="amount" name="amount" required>
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-md-4">
+        <label for="Sname" class="form-label">For Month</label>
+        <select class="form-select" name="month" id="month">
+            <option selected>january</option>
+            <option >february</option>
+            <option >March</option>
+            <option >April</option>
+            <option >May</option>
+            <option >june</option>
+            <option >july</option>
+            <option >August</option>
+            <option >September</option>
+            <option >october</option>
+            <option >November</option>
+            <option >December</option>
+        </select>
+    </div>
+    </div>
+    <button type="button" onclick="addCourse2()">Save</button>
+</form>
+ </div>
+
+</div>
+</div>
+<!-- money recipt update form -->
+<div id="editmyModal" class="modal">
+    <div class="modal-content">
+      <span class="editclose" onclick="editclose()">&times;</span>
+      <div class="container">
+          <h4> Update Money Receipt</h4>
+          <form action="">
+            <div class="row mb-3">
+                <label for="mr" class="col-sm-2 col-form-label">Mr.No :</label>
+                <div class="col-sm-3">
+                  <input type="text" class="form-control" id="editmr" name="editmr" placeholder="Enter Mr. No">
+                </div>
+              </div>
+    <br>
+              <div class="row mb-3">
+                <label for="date" class="col-sm-2 col-form-label">DATE :</label>
+                <div class="col-sm-3">
+                  <input type="date" class="form-control" id="editdate">
+                </div>
+              </div>
+              <br>
+              <div class="row mb-3">
+                <label for="name" class="col-sm-2 col-form-label">STUDENT NAME :</label>
+                <div class="col-sm-3">
+                  <select name="sname" id="editSel" class="form-select" >
+                    <option selected>choose student</option>
+                  </select>
+                </div>
+              </div>
+              <br>
+              <div class="row mb-3">
+                <label for="address" class="col-sm-2 col-form-label">ADDRESS :</label>
+                <div class="col-sm-3">
+                  <input type="text" class="form-control" id="editaddress" name="editaddress"  placeholder="Enter Address">
+                </div>
+              </div>
+              <br>
+              <div class="row mb-3">
+                <label for="address" class="col-sm-2 col-form-label">CONTACT :</label>
+                <div class="col-sm-3">
+                  <input type="text" class="form-control" id="editcontact" name="editcontact"  placeholder="Enter Address">
+                </div>
+              </div>
+              <br>
+              <div class="row mb-3">
+                <label for="amount" class="col-sm-2 col-form-label">AMOUNT :</label>
+                <div class="col-sm-3">
+                  <input type="text" class="form-control" id="editamount"  placeholder="Enter Amount">
+                </div>
+              </div>
+              <br>
+              <div class="row mb-3">
+                <label for="name" class="col-sm-2 col-form-label">FOR MONTH :</label>
+                <div class="col-sm-3">
+                  <select name="MONTH" id="editmonth" class="form-select">
+                    <option selected>january</option>
+                    <option>febuary</option>
+                    <option>march</option>
+                    <option>april</option>
+                    <option>may</option>
+                    <option>june</option>
+                    <option>july</option>
+                    <option>august</option>
+                    <option>september</option>
+                    <option>october</option>
+                    <option>november</option>
+                    <option>december</option>
+                  </select>
+                </div>
+              </div>
+              <br>
+              <button type="button" class="btn btn-primary"  id="btnCourse2" onclick="update1()" >UPDATE</button>
+          </form>
+    
+          
+      </div>
+      </div>
+      </div>
+
+  <!-- end money recipt update form -->
+
+
+
+
+
+    </section>
+
+
+<!-- money Receipt update end form -->
+
+
+  <!-- ///////////////////////////////////// -->
+
+<section class="home-section" id="s3" style="display: none;">
+    <div class="text">Fee Summary</div>
+
+    <div class="container">
+
+
+      <!-- <form> -->
+
+      <div class="row">
+        <div class="col-sm-3">
+          <label for="date">Date From:</label>
+          <input type="date" id="date1" name="date2" class="form-control" required>
+        </div>
+
+        <div class="col-sm-3">
+          <label for="date">To:</label>
+          <input type="date" id="date2" name="date2" class="form-control" required>
+        </div>
+      </div>
+      <br>
+
+      <div class="row">
+        <label for="sname" class="col-sm-2 col-form-label">Student Name: </label>
+        <div class="col-sm-5">
+          <select class="form-select" id="Sel3" onclick="ShowFee()">
+
+          </select>
+        </div>
+      </div>
+      <br>
+
+      <div class="row">
+        <label for="amount" class="col-sm-2 col-form-label">Amount:</label>
+        <div class="col-sm-3">
+          <input type="text" class="form-control" id="amounts" name="amounts" readonly>
+        </div>
+      </div>
+
+      <br>
+      <br>
+      <div class="row">
+        <label for="amount" class="col-sm-2 col-form-label">Total:</label>
+        <div class="col-sm-3">
+          <input type="text" class="form-control" id="total" name="total" readonly>
+        </div>
+      </div>
+
+      <button type="button" onclick="addCourse3()" class="btn btn-primary">Save</button>
+      <!-- </form> -->
+
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <hr>
+    <!-- Table -->
+    <button id="b3" onclick="showData3()">View List</button>
+
+    <table class="table table-danger table-striped">
+      <thead>
+        <tr>
+          <th>#ID</th>
+          <th>Date From </th>
+          <th>To</th>
+          <th>Student Name</th>
+          <th>Amount</th>
+        </tr>
+      </thead>
+      <tbody id="tblBody3">
+
+      </tbody>
+    </table>
+    <!-- Table -->
+
+</section>
+
+
+
+  <script src="./script.js"></script>
+
+    
+</body>
+</html>

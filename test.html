@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Send Mail</title>
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+
+
+</head>
+
+<body>
+
+    <input type="button" value="Send Email" onclick="sendEmail()" />
+    <script type="text/javascript">
+
+function otp () {
+    const characters =
+      "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let ot = "";
+    for (let i = 0; i < 6; i++) {
+      ot += characters[Math.floor(Math.random() * characters.length)];
+    }
+    return ot;
+  };
+        function sendEmail() {
+            Email.send({
+                Host: "smtp.elasticemail.com",
+                Username: "mohitniranjan31@elasticmail.com",
+                Password: "73F4A381BF76C28237A30FC5661FB6051635",
+                To: 'mohitniranjan31@gmail.com',
+                From: "mohitniranjan31@gmail.com",
+                Subject: "This is the subject",
+                Body:   `${otp()}`
+            }).then(
+                message => alert(message)
+            );
+            
+        }
+
+   
+    </script>
+</body>
+
+
+</html>
